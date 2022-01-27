@@ -1,0 +1,46 @@
+.home_page {
+    /* padding: 50px; */
+}
+
+.container_wrap {
+    max-width: 100%;
+    margin: 50px auto; 
+}
+
+.home_page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_title {
+    padding: 10px 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home_page .todo_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home_page .todo_item .todo_content {
+    display: flex;
+    align-items: center;
+}
+
+.home_page .todo_item .todo_content .is_done {
+    margin-right: 16px;
+}
+
+.user_info { 
+    margin: 30px 0 50px;
+}
+
+.btn {  
+    margin: 0 10px;
+}

@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "1ac200b4-4c11-4b13-be6e-ea6fb6c7c99e",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"thang\",\n  \"username\": \"tvthag\",\n  \"email\": \"thangtv@ql6625.fr\",\n  \"password\": \"thang123\",\n  \"confirmPassword\": \"thang123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.todo.ql6625.live/api/Accounts",
+					"protocol": "http",
+					"host": [
+						"api",
+						"todo",
+						"ql6625",
+						"live"
+					],
+					"path": [
+						"api",
+						"Accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Accounts/logout?access_token=Yk8t4pWbnnyudutSBDhH13AzFmpVD4YCHwYO0nmAFafkAFqy01zmpEHY9tOcMEHH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Accounts",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "Yk8t4pWbnnyudutSBDhH13AzFmpVD4YCHwYO0nmAFafkAFqy01zmpEHY9tOcMEHH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"test\",\n    \"password\":\"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/Accounts/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Accounts",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password and Send mail get OTP code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"thangtv@ql6625.f\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.todo.ql6625.live/api/Accounts/reset",
+					"protocol": "http",
+					"host": [
+						"api",
+						"todo",
+						"ql6625",
+						"live"
+					],
+					"path": [
+						"api",
+						"Accounts",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"newPassword\": \"thang1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.todo.ql6625.live/api/Accounts/reset-password?access_token=455360",
+					"protocol": "https",
+					"host": [
+						"api",
+						"todo",
+						"ql6625",
+						"live"
+					],
+					"path": [
+						"api",
+						"Accounts",
+						"reset-password"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "455360"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"oldPassword\": \"test1234\",\n    \"newPassword\": \"test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/Accounts/change-password?access_token=Yk8t4pWbnnyudutSBDhH13AzFmpVD4YCHwYO0nmAFafkAFqy01zmpEHY9tOcMEHH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Accounts",
+						"change-password"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "Yk8t4pWbnnyudutSBDhH13AzFmpVD4YCHwYO0nmAFafkAFqy01zmpEHY9tOcMEHH"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
