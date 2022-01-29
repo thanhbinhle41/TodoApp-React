@@ -22,3 +22,24 @@ export const registerMethod = createAsyncThunk(
     } catch (err) {}
   }
 );
+
+export const getUserInfoMethod = createAsyncThunk(
+  `login/getUserInfoMethod`,
+  async (id) => {
+    try {
+      const response = await LoginApiMethod.getUserInfo(id);
+      return response.data;
+    } catch (err) {}
+  }
+);
+
+export const changePasswordMethod = createAsyncThunk(
+  `login/changePasswordMethod`,
+  async (data) => {
+    try {
+      const response = await LoginApiMethod.changePassword(data);
+      console.log('change password', response);
+      return response.data;
+    } catch (err) {}
+  }
+);

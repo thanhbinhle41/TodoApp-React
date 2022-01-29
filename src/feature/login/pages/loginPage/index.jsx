@@ -29,14 +29,14 @@ const LoginPage = () => {
   const handlePasswordOnChange = (e) => {
     setPassword(e.target.value);
   };
-  // const currentId = getLocalStorage('currentId')
+  const currentId = getLocalStorage('currentId')
 
-  const currentId = useSelector(state => state.auth.currentId )
-  useEffect(() => {
-    if(currentId) {
-      navigate('/')
-    }
-  }, [currentId, navigate])
+  // const currentId = useSelector(state => state.auth.currentId )
+  // useEffect(() => {
+  //   if(currentId) {
+  //     navigate('/')
+  //   }
+  // }, [currentId, navigate])
 
   return (
     <div className='login-page'>
