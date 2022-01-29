@@ -13,8 +13,7 @@ const CreateEditTodoForm = (props) => {
         <Form>
             <Form.Group>
                 <Form.Label>Todo name:</Form.Label>
-                <input placeholder='Enter name' onChange={(e) => handleInputNameChange(e)} value={todoName} />
-                {/* <Form.Control placeholder='Enter name' onChange={(e) => handleInputNameChange(e)}  /> */}
+                <Form.Control placeholder='Enter name' onChange={(e) => handleInputNameChange(e)} value={todoName} />
             </Form.Group>
         </Form>
     </div>;

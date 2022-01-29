@@ -2,14 +2,26 @@ import { createSlice } from '@reduxjs/toolkit';
 import { addTodoMethod, deleteTodoMethod, editTodoMethod, getAllTodoMethod, getOneTodoMethod} from './todoThunk';
 
 const initialState = {
-  todoList: [],
-  currentTodo: {
-    name: '',
-    isDone: 0,
-    userId: 0,
-    id: 0,
-  },
-  currentNoteList: [],
+  todoList: [
+    {
+      id: '1',
+      userId: '2',
+      name: 'Todo 1',
+      isDone: false,
+    },
+    {
+      id: '2',
+      userId: '2',
+      name: 'Todo 2',
+      isDone: false,
+    },
+    {
+      id: '3',
+      userId: '2',
+      name: 'Todo 4',
+      isDone: true,
+    },
+  ],
 };
 
 const todoSlice = createSlice({
@@ -19,13 +31,13 @@ const todoSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(addTodoMethod.fulfilled, (state, action) => {
-        // state.todoList = [action.payload, ...state.todoList];
+        state.todoList = [action.payload, ...state.todoList];
       })
       .addCase(editTodoMethod.fulfilled, (state, action) => {
-        // const index = state.todoList.findIndex(
-        //   (todo) => todo.id === action.payload.id
-        // );
-        // state.todoList[index] = action.payload;
+        const index = state.todoList.findIndex(
+          (todo) => todo.id === action.payload.id
+        );
+        state.todoList[index] = action.payload;
       })
       .addCase(deleteTodoMethod.fulfilled, (state, action) => {
         state.todoList = state.todoList.filter(
