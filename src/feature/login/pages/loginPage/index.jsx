@@ -31,13 +31,6 @@ const LoginPage = () => {
   };
   const currentId = getLocalStorage('currentId')
 
-  // const currentId = useSelector(state => state.auth.currentId )
-  // useEffect(() => {
-  //   if(currentId) {
-  //     navigate('/')
-  //   }
-  // }, [currentId, navigate])
-
   return (
     <div className='login-page'>
       <LoginFormWrap cardTitle='Đăng nhập' handleSubmit={handleLogIn}>
