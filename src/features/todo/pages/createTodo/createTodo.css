@@ -27,7 +27,10 @@
         color: #2c3e50;
         /* background-color: #fff; */
         font-size: 16px;
-      }
+    }
+    .filter Button:hover {
+        color: white;
+    }
       .filter .all-border {
         color: cadetblue;
         border-color: #006d77;

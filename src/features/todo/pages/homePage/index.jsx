@@ -61,76 +61,65 @@ const HomePage = () => {
   }, [dispatch]);
 
   return (
-    <div className='home-page'>
-      <div className='container-wrap'>
-        <Card className='todo-list'>
-          <Card.Title className='card-title'>
-            <div className='title'>Todo App with Redux</div>
-
-            <div className='action-wrap'>
-              <Button variant='primary' onClick={() => handleEditProfile()}>
-                Profile
-              </Button>
-              <Button
-                className='logout-btn'
-                variant='primary'
-                onClick={() => handleLogout()}>
-                Logout
-              </Button>
-              <Button
-                className='btn'
-                variant='primary'
-                onClick={() => handleAddTodo()}>
-                Add Todo
-              </Button>
+    <div className='container-wrap'>
+      <h1>todos</h1>
+      <div className="filter">
+          <Button className="all-border" onClick={() => handleEditProfile()}>
+            Profile
+          </Button>
+          <Button className="progress-border" onClick={() => handleAddTodo()}>
+            Add Todo
+          </Button>
+          <Button className="done-border" onClick={() => handleLogout()}>
+            Logout
+          </Button>
+      </div>
+      <div className='main-content'>
+        <input
+          className="todo-input" placeholder="What needs to be done?" disabled="true"
+        />
+        <ul style={{padding: "0px"}}>
+          {todoList.map((todo) =>(
+            <li>
+              <div>
+                <input
+                  type='checkbox'
+                  name='isDone' id='is-done'
+                  style={{"margin-right": "12px"}}
+                  onChange={(e) => handleIsDoneChange(e, todo)}
+                  checked={todo.isDone}
+                />
+                <span>{todo.name}</span>
+              </div>
+              <div>
+                <span className="edit-text" style={{"margin-right": "12px"}} 
+                  onClick={() => handleEdit(todo)}>
+                  Edit
+                </span>
+                <span className="info-text" style={{"margin-right": "12px"}} 
+                  onClick={() => handleView(todo.id)}>
+                  Info
+                </span>
+                <span className="delete-text" onClick={() => handleDeleteTodo(todo.id)}>Delete</span>
+              </div>
+            </li>
+          ))}
+          <li>
+            <div>
+              <input
+                type='checkbox'
+                name='isDone' id='is-done'
+                style={{"margin-right": "12px"}}
+              />
+              <span>Alo123</span>
             </div>
-          </Card.Title>
-
-          <Card.Body>
-            <ListGroup>
-              {todoList.map((todo) => (
-                <ListGroup.Item key={todo.id} className='todo-item'>
-                  <div className='todo-content'>
-                    <div className='is-done'>
-                      <input
-                        type='checkbox'
-                        name='isDone'
-                        id='is-done'
-                        onChange={(e) => handleIsDoneChange(e, todo)}
-                        checked={todo.isDone}
-                      />
-                    </div>
-                    <div className='todo-name'>{todo.name}</div>
-                  </div>
-                  <div className='action-wrap'>
-                    <Button
-                      className='btn'
-                      variant='primary'
-                      onClick={() => handleEdit(todo)}>
-                      Edit
-                    </Button>
-                    <Button
-                      className='btn'
-                      variant='primary'
-                      onClick={() => handleView(todo.id)}>
-                      View
-                    </Button>
-                    <Button
-                      className='btn'
-                      variant='primary'
-                      onClick={() => handleDeleteTodo(todo.id)}>
-                      Delete
-                    </Button>
-                  </div>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Card.Body>
-
-          {/* <Card.Footer className='d-flex justify-content-end'>
-            
-          </Card.Footer> */}
-        </Card>
+            <div>
+              <span className="edit-text" style={{"margin-right": "12px"}} >Edit</span>
+              <span className="info-text" style={{"margin-right": "12px"}} >Info</span>
+              <span className="delete-text">Delete</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   );

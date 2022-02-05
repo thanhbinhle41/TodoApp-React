@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { getLocalStorage } from '../../../../services/localStorage';
 import CreateEditTodoForm from '../../components/CreateEditTodoForm';
 import { editTodoMethod } from '../../services/todoThunk';
+import './editTodo.css'
 
 const EditTodoPage = () => {
   const { state } = useLocation();
@@ -28,17 +29,17 @@ const EditTodoPage = () => {
   };
 
   return (
-    <div>
-      <Card className='container-wrap'>
-        <Card.Title>Edit todo</Card.Title>
+    <div className='container-wrap'>
+      <Card className='user-info'>
+        <Card.Title className='card-title'>Edit todo</Card.Title>
 
         <Card.Body>
           <CreateEditTodoForm todoName={todoName} setTodoName={setTodoName} />
         </Card.Body>
 
-        <Card.Footer className='action-wrap'>
-          <Button onClick={handleBack}>Back</Button>
-          <Button onClick={handleSubmit}>Save</Button>
+        <Card.Footer className='action-wrap filter'>
+          <Button className='logout-btn all-border' onClick={handleSubmit}>Save</Button>
+          <Button className='logout-btn done-border' onClick={handleBack}>Back</Button>
         </Card.Footer>
       </Card>
     </div>

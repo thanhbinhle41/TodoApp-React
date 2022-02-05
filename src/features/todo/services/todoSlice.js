@@ -12,7 +12,26 @@ import {
 } from './todoThunk';
 
 const initialState = {
-  todoList: [],
+  todoList: [
+    {
+      id: '1',
+      userId: '2',
+      name: 'Todo 1',
+      isDone: false,
+    },
+    {
+      id: '2',
+      userId: '2',
+      name: 'Todo 2',
+      isDone: false,
+    },
+    {
+      id: '3',
+      userId: '2',
+      name: 'Todo 4',
+      isDone: true,
+    },
+  ],
   currentTodo: {
     name: '',
     isDone: 0,

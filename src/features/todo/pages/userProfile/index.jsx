@@ -86,32 +86,27 @@ const UserProfilePage = () => {
                 infoLabel='Is admin'
                 infoValue={userInfo.isAdmin ? 'True' : 'False'}
               />
-              <InfoItem
-                editable={false}
-                infoLabel='Email verified'
-                infoValue={userId.emailVerified ? 'True' : 'False'}
-              />
             </Form>
           </div>
         </Card.Body>
-        <Card.Footer className='action-wrap'>
+        <Card.Footer className='action-wrap filter'>
           <Button
-            className='logout-btn'
-            variant='primary'
-            onClick={() => handleBack()}>
-            {isEditable ? 'Cancel' : 'Back'}
-          </Button>
-          <Button
-            className='logout-btn'
+            className='logout-btn all-border'
             variant='primary'
             onClick={() => handleEditClick()}>
             {isEditable ? 'Save' : 'Edit Profile'}
           </Button>
           <Button
-            className='logout-btn'
+            className='logout-btn progress-border'
             variant='primary'
             onClick={() => handleChangePassword()}>
             Change Password
+          </Button>
+          <Button
+            className='logout-btn done-border'
+            variant='primary'
+            onClick={() => handleBack()}>
+            {isEditable ? 'Cancel' : 'Back'}
           </Button>
         </Card.Footer>
       </Card>

@@ -34,9 +34,9 @@ const ChangePasswordPage = () => {
 
   return (
     <div className='container-wrap'>
-      <Card className='card'>
+      <Card className='user-info'>
         <Card.Title className='card-title'>
-          <div className='title'>Đổi mật khẩu</div>
+          <div className='title'>Change Password</div>
         </Card.Title>
 
         <Card.Body>
@@ -62,18 +62,18 @@ const ChangePasswordPage = () => {
             />
           </Form.Group>
         </Card.Body>
-        <Card.Footer className='action-wrap'>
+        <Card.Footer className='action-wrap filter'>
           <Button
-            className='btn'
-            variant='primary'
-            onClick={() => handleBack()}>
-            Back
-          </Button>
-          <Button
-            className='btn'
+            className='logout-btn all-border'
             variant='primary'
             onClick={() => handleChangePassword()}>
             Save
+          </Button>
+          <Button
+            className='logout-btn done-border'
+            variant='primary'
+            onClick={() => handleBack()}>
+            Back
           </Button>
         </Card.Footer>
       </Card>

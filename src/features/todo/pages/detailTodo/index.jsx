@@ -37,8 +37,8 @@ const DetailTodoPage = () => {
 
   return (
     <div className='container-wrap'>
-      <Card>
-        <Card.Title>Detail Todo</Card.Title>
+      <Card className='user-info'>
+        <Card.Title className='card-title'>Detail Todo</Card.Title>
         <Card.Body>
           <div className='detail-todo-body'>
             <div className='detail-item'>
@@ -62,9 +62,9 @@ const DetailTodoPage = () => {
             </div>
           </div>
         </Card.Body>
-        <Card.Footer className='action-wrap'>
-          <Button onClick={handleBack}>Back</Button>
-          <Button onClick={handleAddNote}>Add Note</Button>
+        <Card.Footer className='action-wrap filter'>
+          <Button className='logout-btn all-border' onClick={handleAddNote}>Add note</Button>
+          <Button className='logout-btn done-border' onClick={handleBack}>Back</Button>
           <Form.Control
             value={newNote}
             placeholder='Enter new note'
