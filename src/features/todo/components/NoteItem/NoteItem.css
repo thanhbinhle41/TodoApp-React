@@ -1,0 +1,25 @@
+.note-item {
+  margin-top: 8px;
+}
+
+.note-item-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-label {
+  min-width: 120px;
+  display: inline-block;
+  margin: 0 !important;
+}
+
+.note-input {
+  max-height: 100%;
+}
+
+.note-action {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}

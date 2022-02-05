@@ -1,0 +1,18 @@
+.auth-form-wrap {
+  width: 420px;
+  margin: 100px auto auto;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form-wrap .title {
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+  margin: 0 auto 24px;
+}
+
+.auth-form-wrap .action {
+  margin-top: 12px; 
+}

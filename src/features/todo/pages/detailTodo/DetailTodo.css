@@ -1,0 +1,22 @@
+.todo-note-header {
+  display: flex;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+
+.detail-label {
+  width: 100px;
+  font-weight: 600;
+}
+
+.action-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.action-wrap button {
+  white-space: nowrap;
+}

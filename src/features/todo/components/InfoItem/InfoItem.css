@@ -1,0 +1,10 @@
+.info-item-gr {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.info-item-gr .info-item-label {
+  width: 100px;
+  margin: 0;
+}

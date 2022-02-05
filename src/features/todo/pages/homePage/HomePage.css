@@ -1,0 +1,27 @@
+.home-page .user-info-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-page .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-page .todo-item .todo-content {
+  display: flex;
+  align-items: center;
+}
+
+.home-page .todo-item .todo-content .is-done {
+  margin-right: 16px;
+}
+
+.user-info {
+  margin: 30px 0 50px;
+}
+
+.btn {
+  margin: 0 10px;
+}
